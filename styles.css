@@ -1,0 +1,89 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column; /* จัดเรียงจากบนลงล่าง */
+    align-items: center;
+    padding: 30px;
+}
+
+/* กรอบของเครื่องเล่นแต่ละอัน */
+.audio-player {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+.track-title {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.current-time, .total-duration {
+    font-size: 14px;
+    color: #666;
+    min-width: 35px;
+}
+
+.controls {
+    margin-bottom: 15px;
+}
+
+.controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.controls button:active {
+    transform: scale(0.98);
+}
+
+/* ปุ่ม Loop เมื่อทำงาน */
+.loop-btn.active {
+    background-color: #28a745;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* สไตล์แถบเลื่อน */
+input[type="range"] {
+    -webkit-appearance: none; appearance: none; height: 8px; background: #e0e0e0;
+    border-radius: 5px; outline: none; width: 100%; cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 18px; height: 18px;
+    background: #007bff; border-radius: 50%; cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+    width: 18px; height: 18px; background: #007bff; border-radius: 50%;
+    cursor: pointer; border: none;
+}
